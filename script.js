@@ -4,13 +4,12 @@ const searchBtn = document.getElementById("searchBtn");
 const locationBtn = document.getElementById("locationBtn");
 const searchInput = document.getElementById("searchInput");
 
-// Manual city search
+
 searchBtn.addEventListener("click", () => {
   const city = searchInput.value.trim();
   if (city !== "") getWeatherByCity(city);
 });
 
-// "Use My Location" button
 locationBtn.addEventListener("click", () => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -27,9 +26,8 @@ locationBtn.addEventListener("click", () => {
   }
 });
 
-// On page load – auto detect location
 window.addEventListener("load", () => {
-  locationBtn.click(); // same as pressing location button
+  locationBtn.click();
 });
 
 async function getWeatherByCoords(lat, lon) {
