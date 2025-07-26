@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="config.js"></script> <!-- API Key Config -->
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search city..." />
+      <button id="searchBtn"><i class="ph ph-magnifying-glass"></i></button>
+      <button id="locationBtn"><i class="ph ph-crosshair-simple"></i></button>
+    </div>
+    <div class="weather-card">
+      <div class="weather-icon" id="weatherIcon">☀️</div>
+      <div class="temperature" id="temperature">--°C</div>
+      <div class="city" id="city">City</div>
+      <div class="details">
+        <div class="info">
+          <i class="ph ph-wave-sine"></i>
+          <div>
+            <p id="humidity">--%</p>
+            <span>Humidity</span>
+          </div>
+        </div>
+        <div class="info">
+          <i class="ph ph-wind"></i>
+          <div>
+            <p id="windSpeed">-- km/h</p>
+            <span>Wind Speed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
